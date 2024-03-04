@@ -8,13 +8,16 @@ console.log("Traveler's age: " + age + ".  Kilometers: " + kilometers)
 // Calculate full price 
 
 const fullPrice = (kilometers * 0.21); //number
-console.log("Full price is: " + fullPrice.toFixed(2) + "€");
+const roundedFullPrice = Math.round((fullPrice + Number.EPSILON)*100) / 100; //number
+console.log("Full price is: " + roundedFullPrice + "€");
 
 // Apply the discount 
 if (age < 18) {
     let discountedPrice = fullPrice - (fullPrice * 0.2); //number
-    console.log("The discounted price is: " + discountedPrice.toFixed(2) + "€");
+    let roundedDiscountedPrice = Math.round((discountedPrice + Number.EPSILON)*100) / 100; //number
+    console.log("The discounted price is: " + roundedDiscountedPrice + "€");
 } else if (age >= 65) {
     let discountedPrice = fullPrice - (fullPrice * 0.4); //number
-    console.log("The discounted price is: " + discountedPrice.toFixed(2) + "€");
+    let roundedDiscountedPrice = Math.round((discountedPrice + Number.EPSILON)*100) / 100; //number
+    console.log("The discounted price is: " + roundedDiscountedPrice + "€");
 }
