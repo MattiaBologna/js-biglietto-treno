@@ -14,11 +14,9 @@ trainTicketPrice.innerHTML = fullPrice.toFixed(2) + "€"
 // Apply the discount 
 if (age < 18) {
     fullPrice = fullPrice - (fullPrice * 0.2); //number
-    let trainTicketPrice = document.getElementById('train-ticket-price')
     trainTicketPrice.innerHTML = fullPrice.toFixed(2) + "€";
 } else if (age >= 65) {
     fullPrice = fullPrice - (fullPrice * 0.4); //number
-    let trainTicketPrice = document.getElementById('train-ticket-price')
     trainTicketPrice.innerHTML = fullPrice.toFixed(2) + "€";
 }
 
